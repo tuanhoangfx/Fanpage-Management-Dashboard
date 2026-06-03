@@ -1,0 +1,6 @@
+{
+  "name": "Facebook Fanpage Dashboard",
+  "description": "A dashboard to display key metrics and recent posts from a Facebook Fanpage. It uses a provided access token to fetch data directly from the Facebook Graph API.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
