@@ -1,0 +1,70 @@
+﻿{
+    "schemaVersion":  1,
+    "code":  "P0023",
+    "id":  "fanpage-dashboard",
+    "aliases":  [
+                    "P0023",
+                    "Fanpage Dashboard",
+                    "P0023-Fanpage-Dashboard",
+                    "Facebook Fanpage Dashboard"
+                ],
+    "name":  "Fanpage Dashboard",
+    "type":  "Web",
+    "owner":  "Tool",
+    "status":  "Ready",
+    "summary":  "Facebook Fanpage metrics, posts, and page management via Graph API (React + Vite + Tailwind).",
+    "stack":  [
+                  "React",
+                  "TypeScript",
+                  "Vite",
+                  "Tailwind CSS",
+                  "Facebook Graph API"
+              ],
+    "commands":  {
+                     "dev":  "corepack pnpm open",
+                     "build":  "corepack pnpm build",
+                     "preview":  "corepack pnpm preview"
+                 },
+    "docs":  {
+                 "readme":  "README.md",
+                 "changelog":  "CHANGELOG.md",
+                 "release":  "RELEASE.md",
+                 "dns":  "docs/DNS-FANPAGE.md"
+             },
+    "github":  {
+                   "repo":  "tuanhoangfx/P0023-Fanpage-Dashboard",
+                   "branch":  "main",
+                   "manifestPath":  "tool.manifest.json"
+               },
+    "deployTarget":  "vercel",
+    "release":  {
+                    "version":  "2.1.1",
+                    "readiness":  [
+                                      "build",
+                                      "vercel-production",
+                                      "custom-domain"
+                                  ]
+                },
+    "urls":  {
+                 "app":  "https://fanpage.infix1.io.vn",
+                 "preview":  "https://p0023-fanpage-dashboard.vercel.app",
+                 "local":  "http://127.0.0.1:3023",
+                 "appSetupAt":  "2026-06-03T00:49:21.180Z"
+             },
+    "vercel":  {
+                   "project":  "p0023-fanpage-dashboard",
+                   "productionUrl":  "https://fanpage.infix1.io.vn",
+                   "previewUrl":  "https://p0023-fanpage-dashboard.vercel.app",
+                   "productionBranch":  "main",
+                   "team":  "tuanhoangfxs-projects",
+                   "customDomains":  [
+                                         "fanpage.infix1.io.vn"
+                                     ],
+                   "notes":  "Vite SPA. DNS A fanpage.infix1.io.vn -\u003e 76.76.21.21 (Tino)."
+               },
+    "health":  {
+                   "status":  "Ready",
+                   "note":  "Facebook access token via in-app Settings. Optional GEMINI_API_KEY for EngagementBooster."
+               },
+    "manifestUpdatedAt":  "2026-06-03T00:49:21.181Z"
+}

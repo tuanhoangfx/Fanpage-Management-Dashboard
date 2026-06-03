@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
 import type { Page, TokenProfile, Post } from './types';
 import { getPagesData, getTokenInfo, updatePageDetails } from './services/facebookService';
 import Sidebar from './components/Sidebar';
@@ -7,11 +7,12 @@ import LoadingSpinner from './components/LoadingSpinner';
 import ErrorMessage from './components/ErrorMessage';
 import PageDashboard from './components/PageDashboard';
 import AllPagesDashboard from './components/AllPagesDashboard';
-import SettingsModal from './components/SettingsModal';
-import Uploader from './components/Uploader';
-import RoleManager from './components/RoleManager';
-import EngagementBooster from './components/EngagementBooster';
-import PostDetailModal from './components/PostDetailModal';
+
+const SettingsModal = lazy(() => import('./components/SettingsModal'));
+const Uploader = lazy(() => import('./components/Uploader'));
+const RoleManager = lazy(() => import('./components/RoleManager'));
+const EngagementBooster = lazy(() => import('./components/EngagementBooster'));
+const PostDetailModal = lazy(() => import('./components/PostDetailModal'));
 
 
 interface User {
@@ -265,15 +266,27 @@ const App: React.FC = () => {
     }
 
     if (selectedPageId === 'uploader') {
-        return <Uploader pages={pages} />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Uploader pages={pages} />
+          </Suspense>
+        );
     }
 
     if (selectedPageId === 'role_manager') {
-        return <RoleManager pages={pages} />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <RoleManager pages={pages} />
+          </Suspense>
+        );
     }
     
     if (selectedPageId === 'engagement_booster') {
-        return <EngagementBooster pages={pages} />;
+        return (
+          <Suspense fallback={<LoadingSpinner />}>
+            <EngagementBooster pages={pages} />
+          </Suspense>
+        );
     }
 
     if (selectedPageId === 'all') {
@@ -323,26 +336,30 @@ const App: React.FC = () => {
             </div>
         </main>
       </div>
-      <SettingsModal 
-        isOpen={isSettingsOpen}
-        onClose={() => setIsSettingsOpen(false)}
-        onSave={handleSaveSettings}
-        initialTokens={accessTokens}
-      />
-      {editingPage && (
-        <EditPageModal 
-            page={editingPage}
-            onClose={() => setEditingPage(null)}
-            onSave={handleSavePageDetails}
-        />
-      )}
-      {viewingPost && (
-        <PostDetailModal
-            post={viewingPost.post}
-            page={viewingPost.page}
-            onClose={() => setViewingPost(null)}
-        />
-      )}
+      <Suspense fallback={null}>
+        {isSettingsOpen && (
+          <SettingsModal 
+            isOpen={isSettingsOpen}
+            onClose={() => setIsSettingsOpen(false)}
+            onSave={handleSaveSettings}
+            initialTokens={accessTokens}
+          />
+        )}
+        {editingPage && (
+          <EditPageModal 
+              page={editingPage}
+              onClose={() => setEditingPage(null)}
+              onSave={handleSavePageDetails}
+          />
+        )}
+        {viewingPost && (
+          <PostDetailModal
+              post={viewingPost.post}
+              page={viewingPost.page}
+              onClose={() => setViewingPost(null)}
+          />
+        )}
+      </Suspense>
       <style>{`
         @keyframes fade-in {
           from { opacity: 0; transform: translateY(10px); }

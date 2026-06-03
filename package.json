@@ -1,21 +1,31 @@
 {
-  "name": "facebook-fanpage-dashboard",
+  "name": "fanpage-dashboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.1.1",
+  "description": "P0023 Fanpage Dashboard — Facebook Fanpage metrics and page management.",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "open": "node ../scripts/open-tool.cjs --open",
     "build": "vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuanhoangfx/P0023-Fanpage-Dashboard.git"
+  },
   "dependencies": {
-    "react-dom": "^19.2.0",
-    "react": "^19.2.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "3.4.13",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"
-  }
+  },
+  "packageManager": "pnpm@10.33.2"
 }
