@@ -1,71 +1,76 @@
-﻿{
-    "schemaVersion":  1,
-    "code":  "P0023",
-    "id":  "fanpage-dashboard",
-    "aliases":  [
-                    "P0023",
-                    "Fanpage Dashboard",
-                    "P0023-Fanpage-Dashboard",
-                    "Facebook Fanpage Dashboard"
-                ],
-    "name":  "Fanpage Dashboard",
-    "type":  "Web",
-    "owner":  "Tool",
-    "status":  "Ready",
-    "summary":  "Facebook Fanpage metrics, posts, and page management via Graph API (React + Vite + Tailwind).",
-    "stack":  [
-                  "React",
-                  "TypeScript",
-                  "Vite",
-                  "Tailwind CSS",
-                  "Facebook Graph API"
-              ],
-    "commands":  {
-                     "dev":  "corepack pnpm open",
-                     "build":  "corepack pnpm build",
-                     "preview":  "corepack pnpm preview"
-                 },
-    "docs":  {
-                 "readme":  "README.md",
-                 "changelog":  "CHANGELOG.md",
-                 "release":  "RELEASE.md",
-                 "dns":  "docs/DNS-FANPAGE.md"
-             },
-    "github":  {
-                   "repo":  "tuanhoangfx/P0023-Fanpage-Dashboard",
-                   "branch":  "main",
-                   "manifestPath":  "tool.manifest.json"
-               },
-    "deployTarget":  "vercel",
-    "release":  {
-                    "version":  "2.1.1",
-                    "readiness":  [
-                                      "build",
-                                      "vercel-production",
-                                      "custom-domain"
-                                  ]
-                },
-    "urls":  {
-                 "app":  "https://fanpage.infi.io.vn",
-                 "preview":  "https://p0023-fanpage-dashboard.vercel.app",
-                 "local":  "http://127.0.0.1:3023",
-                 "appSetupAt":  "2026-06-03T00:49:21.180Z"
-             },
-    "vercel":  {
-                   "project":  "p0023-fanpage-dashboard",
-                   "productionUrl":  "https://fanpage.infi.io.vn",
-                   "previewUrl":  "https://p0023-fanpage-dashboard.vercel.app",
-                   "productionBranch":  "main",
-                   "team":  "tuanhoangfxs-projects",
-                   "customDomains":  [
-                                         "fanpage.infi.io.vn"
-                                     ],
-                   "notes":  "Vite SPA. DNS A fanpage.infi.io.vn -\u003e 76.76.21.21 (Tino).",
-                   "projectId":  "prj_A2mA0XSmW1XH4e1IcvZOhsuSd5CG"
-               },
-    "health":  {
-                   "status":  "Ready",
-                   "note":  "Facebook access token via in-app Settings. Optional GEMINI_API_KEY for EngagementBooster."
-               },
-    "manifestUpdatedAt":  "2026-06-03T00:52:19.046Z"
+{
+  "schemaVersion": 1,
+  "code": "P0023",
+  "id": "fanpage-dashboard",
+  "aliases": [
+    "P0023",
+    "Fanpage Dashboard",
+    "P0023-Fanpage-Dashboard",
+    "Facebook Fanpage Dashboard"
+  ],
+  "name": "Fanpage Dashboard",
+  "type": "Web",
+  "owner": "Tool",
+  "status": "Ready",
+  "summary": "Facebook Fanpage metrics, posts, and page management via Graph API (React + Vite + Tailwind).",
+  "stack": [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Facebook Graph API"
+  ],
+  "commands": {
+    "dev": "corepack pnpm open",
+    "build": "corepack pnpm build",
+    "preview": "corepack pnpm preview"
+  },
+  "docs": {
+    "readme": "README.md",
+    "changelog": "CHANGELOG.md",
+    "release": "RELEASE.md",
+    "dns": "docs/DNS-FANPAGE.md"
+  },
+  "github": {
+    "repo": "tuanhoangfx/P0023-Fanpage-Dashboard",
+    "branch": "main",
+    "manifestPath": "tool.manifest.json"
+  },
+  "deployTarget": "vercel",
+  "release": {
+    "version": "2.1.1",
+    "readiness": [
+      "build",
+      "vercel-production",
+      "custom-domain"
+    ],
+    "latestPublished": {
+      "tag": "v2.1.1",
+      "url": "https://github.com/tuanhoangfx/P0023-Fanpage-Dashboard/releases/tag/v2.1.1",
+      "publishedAt": "2026-06-05T01:02:53.714Z"
+    }
+  },
+  "urls": {
+    "app": "https://fanpage.infi.io.vn",
+    "preview": "https://p0023-fanpage-dashboard.vercel.app",
+    "local": "http://127.0.0.1:3023",
+    "appSetupAt": "2026-06-03T00:49:21.180Z"
+  },
+  "vercel": {
+    "project": "p0023-fanpage-dashboard",
+    "productionUrl": "https://fanpage.infi.io.vn",
+    "previewUrl": "https://p0023-fanpage-dashboard.vercel.app",
+    "productionBranch": "main",
+    "team": "tuanhoangfxs-projects",
+    "customDomains": [
+      "fanpage.infi.io.vn"
+    ],
+    "notes": "Vite SPA. DNS A fanpage.infi.io.vn -> 76.76.21.21 (Tino).",
+    "projectId": "prj_A2mA0XSmW1XH4e1IcvZOhsuSd5CG"
+  },
+  "health": {
+    "status": "Ready",
+    "note": "Facebook access token via in-app Settings. Optional GEMINI_API_KEY for EngagementBooster."
+  },
+  "manifestUpdatedAt": "2026-06-05T01:02:53.717Z"
 }
