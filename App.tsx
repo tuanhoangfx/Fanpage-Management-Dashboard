@@ -140,7 +140,7 @@ const App: React.FC = () => {
   const [accessTokens, setAccessTokens] = useState<string[]>(() => {
     const savedTokens = localStorage.getItem('fb_access_tokens');
     // Add default token for first-time use
-    return savedTokens ? JSON.parse(savedTokens) : ['EAAH5FC8GNVcBP5pCXCvbzJLdTfXuZAXQ9NcnYZCuFZBDv6h8y4xegDMcfkdyjI13KeYSFay0cidF6ZByZBLIZAfkoF0zhZCYONQnBkou9DH9Ks8DsjeST77ZC5tmeG7WjYMK6uLZBuQpa6p8rD7d2YFR6gIz9dFQ7dxDUFGnVL9UTdmAieP8hHs9IWXQqAAZCopEXWskF6AbNRcAZDZD'];
+    return savedTokens ? JSON.parse(savedTokens) : [];
   });
   const [tokenProfiles, setTokenProfiles] = useState<TokenProfile[]>([]);
   const [refreshInterval, setRefreshInterval] = useState<string>(() => localStorage.getItem('fb_refresh_interval') || '0');

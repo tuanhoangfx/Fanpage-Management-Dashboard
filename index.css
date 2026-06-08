@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "@tool-workspace/hub-ui/styles/hub-check-indicator.css";
+@import "@tool-workspace/hub-ui/styles/hub-shell-layout.css";
+@import "@tool-workspace/hub-ui/styles/hub-app-tab-header.css";
+@import "@tool-workspace/hub-ui/styles/hub-fields.css";
+@import "@tool-workspace/hub-ui/styles/hub-users-table.css";

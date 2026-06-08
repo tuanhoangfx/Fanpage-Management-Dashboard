@@ -18,6 +18,7 @@ export default defineConfig(({ mode }) => {
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
+          '@tool-workspace/hub-ui': path.resolve(__dirname, '../../packages/hub-ui/src'),
         }
       },
       build: {

@@ -10,7 +10,7 @@
 - Product: P0023
 - Prompt: Thực hiện toàn bộ các đề xuất — Tailwind build, rename P0023-Fanpage-Dashboard, domain fanpage.infi.io.vn, Release.
 - Commit: `8b146e5`
-- Status: Verified
+- Status: Committed
 - Release: https://github.com/tuanhoangfx/P0023-Fanpage-Dashboard/releases/tag/v2.1.1
 
 ### Changes
