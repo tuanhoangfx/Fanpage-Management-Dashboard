@@ -48,7 +48,7 @@
     "latestPublished": {
       "tag": "v2.1.1",
       "url": "https://github.com/tuanhoangfx/P0023-Fanpage-Dashboard/releases/tag/v2.1.1",
-      "publishedAt": "2026-06-05T01:02:53.714Z"
+      "publishedAt": "2026-06-10T07:39:44.050Z"
     }
   },
   "urls": {
@@ -71,7 +71,7 @@
     "status": "Ready",
     "note": "Facebook access token via in-app Settings. Optional GEMINI_API_KEY for EngagementBooster."
   },
-  "manifestUpdatedAt": "2026-06-05T01:02:53.717Z",
+  "manifestUpdatedAt": "2026-06-10T07:39:44.050Z",
   "uiScreens": [
     {
       "screen": "catalog",
